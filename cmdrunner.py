@@ -40,7 +40,7 @@ netmiko_exceptions = (netmiko.NetMikoTimeoutException,
 for device in devices:
     try:
         print('~'*79)
-        print("Connecting to device", device)
+        print("Connecting to device", device['ip'])
         connection = netmiko.ConnectHandler(**devices)
         print(connection.send_command('show ip int brief'))
 
