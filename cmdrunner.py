@@ -33,6 +33,9 @@ r3 = {'ip': '192.168.254.243',
 
 devices = [r1, r2, r3]
 
+netmiko_exceptions = (netmiko.ssh_exception.NetMikoTimeoutException,
+                      netmiko.ssh_exception.NetMikoAuthenticationException)
+
 for device in devices:
     try:
         print('~'*79)
@@ -41,5 +44,6 @@ for device in devices:
         print(connection.send_command('show ip int brief'))
 
         connection.disconnect()
-    except netmiko.ssh_auth.NetMikoAuthenticationException:
-        print("Authentication Error")
+    except netmiko_exceptions as e:
+        print("Failed to ", device['ip'], e)
+    
