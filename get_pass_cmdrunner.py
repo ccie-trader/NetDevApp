@@ -19,8 +19,8 @@ def get_credentials():
     password = None
 
     while not password:
-        password = get_pass()
-        password_verify = get_pass('Confirm password: ')
+        password = getpass()
+        password_verify = getpass('Confirm password: ')
         
         if password != password_verify:
             print('Password do not match. Try again.')
