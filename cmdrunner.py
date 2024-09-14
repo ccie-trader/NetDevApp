@@ -33,23 +33,28 @@ import netmiko.ssh_auth
 
 ##USING LIST OF DICTIONARIES
 
-devices = [
-    
-{'ip': '192.168.254.241',
-'device_type': 'cisco_ios',
-'username': 'nde',
-'password': 'automate'},
+#devices = [
+#    
+#{'ip': '192.168.254.241',
+#'device_type': 'cisco_ios',
+#'username': 'nde',
+#'password': 'automate'},
+#
+#{'ip': '192.168.254.242',
+#'device_type': 'cisco_ios',
+#'username': 'nde',
+#'password': 'automate'},
+#
+#{'ip': '192.168.254.243',
+#'device_type': 'cisco_xr',
+#'username': 'ccie',
+#'password': 'ccie'}
+#]  
 
-{'ip': '192.168.254.242',
-'device_type': 'cisco_ios',
-'username': 'nde',
-'password': 'automate'},
+##USING A JSON FILE FOR DEVICES
 
-{'ip': '192.168.254.243',
-'device_type': 'cisco_xr',
-'username': 'ccie',
-'password': 'ccie'}
-]
+with open('devices.json') as dev_file:
+    devices = json.load(dev_file)
 
 netmiko_exceptions = (netmiko.NetMikoTimeoutException,
                       netmiko.NetMikoAuthenticationException,
