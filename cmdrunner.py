@@ -34,7 +34,7 @@ r3 = {'ip': '192.168.254.243',
 devices = [r1, r2, r3]
 
 netmiko_exceptions = (netmiko.NetMikoTimeoutException,
-                      netmiko.NetMikoAuthenticationException
+                      netmiko.NetMikoAuthenticationException,
                       netmiko.netmiko_exceptions)
 
 for device in devices:
