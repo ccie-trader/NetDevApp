@@ -41,7 +41,7 @@ for device in devices:
     try:
         print('~'*79)
         print("Connecting to device", device['ip'])
-        connection = netmiko.ConnectHandler(**devices)
+        connection = netmiko.ConnectHandler(**device)
         print(connection.send_command('show ip int brief'))
 
         connection.disconnect()
