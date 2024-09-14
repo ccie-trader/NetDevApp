@@ -38,12 +38,12 @@ devices = [
 {'ip': '192.168.254.241',
 'device_type': 'cisco_ios',
 'username': 'nde',
-'password': 'automate'}
+'password': 'automate'},
 
 {'ip': '192.168.254.242',
 'device_type': 'cisco_ios',
 'username': 'nde',
-'password': 'automate'}
+'password': 'automate'},
 
 {'ip': '192.168.254.243',
 'device_type': 'cisco_xr',
