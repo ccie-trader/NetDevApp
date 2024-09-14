@@ -13,25 +13,43 @@ import netmiko.ssh_auth
 #192.168.254.242            
 #'''.strip().split()
 
-#Using Dictionary to access devices
+##USING DICTIONARY TO ACCESS DEVICES
 
-r1 = {'ip': '192.168.254.241',
-      'device_type': 'cisco_ios',
-      'username': 'nde',
-      'password': 'automate'}
+#r1 = {'ip': '192.168.254.241',
+#      'device_type': 'cisco_ios',
+#      'username': 'nde',
+#      'password': 'automate'}
+#
+#r2 = {'ip': '192.168.254.242',
+#      'device_type': 'cisco_ios',
+#      'username': 'nde',
+#      'password': 'automate'}
+#
+#r3 = {'ip': '192.168.254.243',
+#      'device_type': 'cisco_xr',
+#      'username': 'ccie',
+#      'password': 'ccie'}
+#	
 
-r2 = {'ip': '192.168.254.242',
-      'device_type': 'cisco_ios',
-      'username': 'nde',
-      'password': 'automate'}
+##USING LIST OF DICTIONARIES
 
-r3 = {'ip': '192.168.254.243',
-      'device_type': 'cisco_xr',
-      'username': 'ccie',
-      'password': 'ccie'}
+devices = [
+    
+{'ip': '192.168.254.241',
+'device_type': 'cisco_ios',
+'username': 'nde',
+'password': 'automate'}
 
+{'ip': '192.168.254.242',
+'device_type': 'cisco_ios',
+'username': 'nde',
+'password': 'automate'}
 
-devices = [r1, r2, r3]
+{'ip': '192.168.254.243',
+'device_type': 'cisco_xr',
+'username': 'ccie',
+'password': 'ccie'}
+]
 
 netmiko_exceptions = (netmiko.NetMikoTimeoutException,
                       netmiko.NetMikoAuthenticationException,
