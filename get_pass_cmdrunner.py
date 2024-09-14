@@ -17,8 +17,8 @@ netmiko_exceptions = (netmiko.NetMikoTimeoutException,
                       netmiko.NetMikoAuthenticationException,
                       netmiko.NetmikoBaseException)
 
-username = get_input('Enter Username')
-password = get_input('Enter Password')
+username = get_input('Enter Username: ')
+password = get_input('Enter Password: ')
 
 with open('devices.json') as dev_file:
     devices = json.load(dev_file)
