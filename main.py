@@ -1,7 +1,7 @@
 #!/user/bin/python3
 #This is for NetDevApp
 
-import banner()
+import banner
 
 banner.banner()
 
