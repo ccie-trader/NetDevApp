@@ -17,17 +17,17 @@ import netmiko.ssh_auth
 
 r1 = {'ip': '192.168.254.241',
       'device_type': 'cisco_ios',
-      'username:' 'nde',
+      'username': 'nde',
       'password': 'automate'}
 
 r2 = {'ip': '192.168.254.242',
       'device_type': 'cisco_ios',
-      'username:' 'nde',
+      'username': 'nde',
       'password': 'automate'}
 
 r3 = {'ip': '192.168.254.243',
       'device_type': 'cisco_xr',
-      'username:' 'nde',
+      'username': 'nde',
       'password': 'automate'}
 
 
