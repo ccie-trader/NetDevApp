@@ -7,25 +7,39 @@ import netmiko.ssh_auth
 # Basic Connection
 #connection = netmiko.ConnectHandler(ip='192.168.254.241', device_type='cisco_ios', username='nde', password='automate')
 
-# Using a for loop
-devices = '''
-192.168.254.241
-192.168.254.242            
-'''.strip().split()
+# Manually accessing devices
+#devices = '''
+#192.168.254.241
+#192.168.254.242            
+#'''.strip().split()
+
+#Using Dictionary to access devices
+
+r1 = {'ip': '192.168.254.241',
+      'device_type': 'cisco_ios',
+      'username:' 'nde',
+      'password': 'automate'}
+
+r2 = {'ip': '192.168.254.242',
+      'device_type': 'cisco_ios',
+      'username:' 'nde',
+      'password': 'automate'}
+
+r3 = {'ip': '192.168.254.243',
+      'device_type': 'cisco_xr',
+      'username:' 'nde',
+      'password': 'automate'}
+
+
+devices = [r1, r2, r3]
 
 for device in devices:
     try:
         print('~'*79)
         print("Connecting to device", device)
-        connection = netmiko.ConnectHandler(ip = device,
-                                            device_type = "cisco_ios",
-                                            username = "nde",
-                                            password = "automate")
-
-
+        connection = netmiko.ConnectHandler(**device)
         print(connection.send_command('show ip int brief'))
 
         connection.disconnect()
     except netmiko.ssh_auth.NetMikoAuthenticationException:
         print("Authentication Error")
-
