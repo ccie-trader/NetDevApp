@@ -35,7 +35,7 @@ devices = [r1, r2, r3]
 
 netmiko_exceptions = (netmiko.NetMikoTimeoutException,
                       netmiko.NetMikoAuthenticationException,
-                      netmiko.netmiko_exceptions)
+                      netmiko.NetmikoBaseException)
 
 for device in devices:
     try:
