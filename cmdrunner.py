@@ -27,8 +27,8 @@ r2 = {'ip': '192.168.254.242',
 
 r3 = {'ip': '192.168.254.243',
       'device_type': 'cisco_xr',
-      'username': 'nde',
-      'password': 'automate'}
+      'username': 'ccie',
+      'password': 'ccie'}
 
 
 devices = [r1, r2, r3]
