@@ -8,7 +8,7 @@ import netmiko.ssh_auth
 import myaccess
 
 
-banner.baner()
+banner.banner()
 
 ##USING A JSON FILE FOR DEVICES
 
