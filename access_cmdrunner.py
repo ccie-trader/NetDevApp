@@ -1,7 +1,7 @@
 #!/user/bin/python3
 #GETPASS USING IMPORT COMMAND
 
-import banner()
+import banner
 import netmiko
 import json
 import netmiko.ssh_auth
