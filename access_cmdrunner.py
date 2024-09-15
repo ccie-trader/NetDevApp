@@ -1,11 +1,14 @@
 #!/user/bin/python3
 #GETPASS USING IMPORT COMMAND
 
+import banner()
 import netmiko
 import json
 import netmiko.ssh_auth
 import myaccess
 
+
+banner.baner()
 
 ##USING A JSON FILE FOR DEVICES
 
