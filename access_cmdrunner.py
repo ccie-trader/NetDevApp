@@ -8,8 +8,6 @@ import netmiko.ssh_auth
 import myaccess
 
 
-banner.banner()
-
 ##USING A JSON FILE FOR DEVICES
 
 netmiko_exceptions = (netmiko.NetMikoTimeoutException,
