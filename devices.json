@@ -7,7 +7,7 @@
     },
 
     {   
-    "ip": "192.168.254.241",
+    "ip": "192.168.254.242",
     "device_type": "cisco_ios",
     "username": "nde",
     "password": "automate"
@@ -16,7 +16,14 @@
     {   
     "ip": "192.168.254.243",
     "device_type": "cisco_xr",
-    "username": "ccie",
-    "password": "ccie"
+    "username": "nde",
+    "password": "automate"
+    },
+
+    {   
+    "ip": "192.168.254.244",
+    "device_type": "cisco_nxos",
+    "username": "nde",
+    "password": "automate"
     }
 ]
