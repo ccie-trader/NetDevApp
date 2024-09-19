@@ -1,0 +1,4 @@
+show int brief
+show route
+show bgp summary
+show ospf neighbor
