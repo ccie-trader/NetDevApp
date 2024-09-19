@@ -8,6 +8,10 @@ import netmiko.ssh_auth
 import myaccess
 import sys
 
+if len(sys.argv) < 3:
+    print("Usage: access_cmdrunner.py commands.txt devices.json")
+    exit()
+
 ##USING A JSON FILE FOR DEVICES
 
 netmiko_exceptions = (netmiko.NetMikoTimeoutException,
@@ -36,6 +40,7 @@ for device in devices:
             print('##Output of ' + command)
             print(connection.send_command(command))
             print()
+            
         connection.disconnect()
     except netmiko_exceptions as e:
         print("Failed to ", device['ip'], e)
