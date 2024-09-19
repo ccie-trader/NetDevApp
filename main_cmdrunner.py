@@ -14,8 +14,8 @@ if len(sys.argv) < 3:
 
 ##USING A JSON FILE FOR DEVICES
 
-netmiko_exceptions = (netmiko.NetMikoTimeoutException,
-                      netmiko.NetMikoAuthenticationException,
+netmiko_exceptions = (netmiko.exceptions.NetMikoTimeoutException,
+                      netmiko.exceptions.NetMikoAuthenticationException,
                      )
 
 username, password = myaccess.get_credentials()
