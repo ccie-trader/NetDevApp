@@ -16,7 +16,7 @@ if len(sys.argv) < 3:
 
 netmiko_exceptions = (netmiko.NetMikoTimeoutException,
                       netmiko.NetMikoAuthenticationException,
-                      netmiko.NetmikoBaseException)
+                     )
 
 username, password = myaccess.get_credentials()
 
