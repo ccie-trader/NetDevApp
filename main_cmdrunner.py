@@ -23,12 +23,8 @@ username, password = myaccess.get_credentials()
 with open(sys.argv[1]) as cmd_file:
     commands = cmd_file.readlines()
 
-print(commands) ####TESTING
-
 with open(sys.argv[2]) as dev_file: 
-    devices = dev_file.readlines()
-
-print(devices) ####TESTING
+    devices = json.load(dev_file)
 
 for device in devices:
     try:
@@ -40,7 +36,7 @@ for device in devices:
             print('##Output of ' + command)
             print(connection.send_command(command))
             print()
-            
+
         connection.disconnect()
     except netmiko_exceptions as e:
         print("Failed to ", device['ip'], e)
