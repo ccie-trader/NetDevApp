@@ -33,6 +33,8 @@ with open(sys.argv[2]) as dev_file:
     devices = json.load(dev_file)
 
 for device in devices:
+    device['username'] = username
+    device['password'] = password
     try:
         print('~'*79)
         print("Connecting to device", device['ip'])
