@@ -7,7 +7,11 @@ import netmiko
 import json
 import netmiko.ssh_auth
 import myaccess
+import signal
 import sys
+
+signal.signal(signal.SIGPIPE, signal.SIG_DFL)  # IOError: Broken pipe
+signal.signal(signal.SIGINT, signal.SIG_DFL)  # KeyboardInterrupt: Ctrl-C
 
 if len(sys.argv) < 3:
     print("Usage: access_cmdrunner.py commands.txt devices.json")
