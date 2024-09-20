@@ -2,10 +2,10 @@ from getpass import getpass
 
 def get_input(prompt=''):
     try:
-        line = raw_input(prompt)
+        username = raw_input(prompt)
     except NameError:
-        line = input(prompt)
-
+        username = input(prompt)
+    return username
 def get_credentials():
     '''Prompts for, and returns, a username and passowrd'''
 
@@ -20,4 +20,3 @@ def get_credentials():
             print('Password do not match. Try again.')
             password = None
     return username, password
-
