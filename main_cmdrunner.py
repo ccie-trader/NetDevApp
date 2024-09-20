@@ -32,7 +32,7 @@ with open(sys.argv[1]) as cmd_file:
 with open(sys.argv[2]) as dev_file: 
     devices = json.load(dev_file)
 
-for device in ios_devices::
+for device in ios_devices:
     device['username'] = username
     device['password'] = password
     try:
