@@ -42,7 +42,7 @@ for device in ios_devices:
         filename = connection.base_prompt + '.txt'
         with open(filename, 'w') as out_file:
             for command in commands:
-                out_file.write('##Output of ' + command + '\n\n')
+                out_file.write(command + '\n\n')
                 out_file.write(connection.send_command(command) + '\n\n')
                 print()
 
